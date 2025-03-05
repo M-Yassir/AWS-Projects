@@ -1,7 +1,7 @@
-AWS-Projects 🚀
+# AWS-Projects 🚀
 Welcome to the AWS-Projects repository! This collection features a variety of AWS projects, each meticulously designed and implemented to showcase practical applications of AWS services.
 
-What's Inside 📂
+# What's Inside 📂
 Essential Code Snippets: Find key code snippets that are essential for understanding each project.
 
 Detailed Documentation: Each project includes thorough documentation to guide you through the setup and implementation process.
