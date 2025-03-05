@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 30px;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        #listUsersButton {
+            background-color: #28a745;
+        }
+
+        #listUsersButton:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration</h1>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <h2>User List</h2>
+        <div class="button-container">
+            <button id="listUsersButton">List Users</button>
+        </div>
+        <table id="usersTable">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const apiEndpoint = "YOUR_API_GATEWAY"; // Replace with your actual API Gateway URL
+    
+        // Handle Registration Form Submission (POST request)
+        document.getElementById('registrationForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+    
+            const formData = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value
+            };
+    
+            try {
+                const response = await fetch(apiEndpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+    
+                if (!response.ok) {
+                    throw new Error(await response.text());
+                }
+    
+                alert('Registration successful!');
+                document.getElementById('registrationForm').reset(); // Clear the form
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error: ' + error.message);
+            }
+        });
+    
+        // Handle "List Users" Button Click (GET request)
+        document.getElementById('listUsersButton').addEventListener('click', async function() {
+            try {
+                const response = await fetch(apiEndpoint, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+    
+                if (!response.ok) {
+                    throw new Error(await response.text());
+                }
+    
+                const rawData = await response.json(); // First parse JSON response
+                console.log("Full API Response:", JSON.stringify(rawData, null, 2)); // Log API response
+    
+                const usersTable = document.getElementById('usersTable').getElementsByTagName('tbody')[0];
+                usersTable.innerHTML = ''; // Clear existing rows
+    
+                
+                let data;
+                try {
+                    data = JSON.parse(rawData.body); // Convert stringified JSON into an actual array
+                } catch (e) {
+                    console.error("Error parsing JSON:", e);
+                    throw new Error("Unexpected API response format");
+                }
+    
+                if (!Array.isArray(data)) {
+                    throw new Error("Unexpected API response format"); // Handle invalid response
+                }
+    
+                // Populate the table with extracted data
+                data.forEach(user => {
+                    const row = usersTable.insertRow();
+                    row.insertCell().textContent = user.username || 'N/A';
+                    row.insertCell().textContent = user.email || 'N/A';
+                    row.insertCell().textContent = user.phone || 'N/A';
+                });
+    
+            } catch (error) {
+                console.error('Error fetching users:', error);
+                alert('Error fetching users: ' + error.message);
+            }
+        });
+    </script>
+    
+           
+</body>
+</html>
