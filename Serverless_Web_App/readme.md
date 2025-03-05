@@ -20,6 +20,10 @@ DynamoDB: NoSQL database for user data storage.
 
 Amazon S3: Static website hosting.
 
+## Video Demonstration 📹
+
+https://github.com/user-attachments/assets/9ccfc5ed-27ae-4348-8e58-87053826bcf4
+
 ## Important Note
 🚨 These projects have been terminated for security reasons. Feel free to explore the code and documentation, but be aware that the projects are no longer active or maintained.
 
