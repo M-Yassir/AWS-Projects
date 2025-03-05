@@ -8,10 +8,10 @@ Detailed Documentation: Each project includes thorough documentation to guide yo
 
 Valuable Insights: Explore new AWS implementations, enhance your cloud skills, and reference well-documented projects.
 
-Projects Overview 🌟
+# Projects Overview 🌟
 Each project in this repository is crafted with care and attention to detail. You will find practical examples and valuable insights to help you in your AWS journey.
 
-Important Note ⚠️
+# Important Note ⚠️
 These projects have been terminated for security reasons. While you can explore the code and documentation, please be aware that the projects are no longer active or maintained.
 
 Feel free to explore and learn from these projects, and don't hesitate to reach out if you have any questions or feedback!
