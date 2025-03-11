@@ -26,7 +26,7 @@ These projects have been terminated for security reasons. Feel free to explore t
 
 ## Getting Started
 
-Clone the Repository: git clone https://github.com/your-repo/CI-CD-Pipeline.git
+Clone the Repository: git clone https://github.com/M-Yassir/AWS-Projects/upload/main/CICD_on_EC2.git
 
 Navigate to the Project Directory: cd CI-CD-Pipeline
 
