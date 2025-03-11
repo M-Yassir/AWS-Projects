@@ -21,6 +21,8 @@ AWS IAM: Managing access and permissions.
 
 ## Video Demonstration 📹
 
+https://github.com/user-attachments/assets/9a26bb4a-b238-4282-8f69-e6d3e454cc91
+
 ## Important Note 🚨 
 These projects have been terminated for security reasons. Feel free to explore the code and documentation, but be aware that the projects are no longer active or maintained.
 
