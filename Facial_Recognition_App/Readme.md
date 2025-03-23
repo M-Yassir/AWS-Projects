@@ -53,7 +53,7 @@ Serves as the interface between the frontend and backend, allowing secure commun
 # Video Demonstration 📹
 https://github.com/user-attachments/assets/6756a791-ed39-47a5-8e12-c88cabc3db63
 
-#Important Note 🚨
+# Important Note 🚨
 These projects have been terminated for security reasons. Feel free to explore the code and documentation, but be aware that the projects are no longer active or maintained.
 
 # Getting Started
