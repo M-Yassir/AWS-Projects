@@ -1,12 +1,12 @@
-## Serverless Face Recognition Application 🚀
+# Serverless Face Recognition Application 🚀
 
-# Introduction
+## Introduction
 Welcome to the Serverless Face Recognition Application repository! This project demonstrates the development of a fully serverless biometric authentication system using Amazon Web Services (AWS).
 The application enables secure and efficient employee registration and login through facial recognition technology, eliminating the need for passwords while ensuring high security.
 This system is fully serverless, leveraging AWS services like Lambda, API Gateway, Rekognition, S3, and DynamoDB to create a scalable, cost-efficient, and highly available authentication platform.
 Built entirely within the AWS Free Tier, it showcases the power of cloud computing, AI-based authentication, and serverless architecture.
 
-# Key Features
+## Key Features
 ✅ Employee Registration:
 
 Admins register employees by submitting their name and image.
@@ -34,7 +34,7 @@ AWS Rekognition: Powers AI-based facial recognition, enabling automated authenti
 The frontend is built with HTML, CSS, and JavaScript and hosted on Amazon S3.
 Provides a cost-effective and scalable solution for web hosting.
 
-# AWS Services Used
+## AWS Services Used
 Amazon S3
 Used for secure storage of employee images. Images are first uploaded temporarily before being permanently stored once verified by Rekognition.
 
@@ -50,18 +50,18 @@ Powers the backend logic, handling image uploads, Rekognition API calls, and Dyn
 Amazon API Gateway
 Serves as the interface between the frontend and backend, allowing secure communication between the web application and AWS Lambda functions.
 
-# Video Demonstration 📹
+## Video Demonstration 📹
 https://github.com/user-attachments/assets/6756a791-ed39-47a5-8e12-c88cabc3db63
 
-# Important Note 🚨
+## Important Note 🚨
 These projects have been terminated for security reasons. Feel free to explore the code and documentation, but be aware that the projects are no longer active or maintained.
 
-# Getting Started
+## Getting Started
 Clone the Repository: git clone https://github.com/M-Yassir/AWS-Projects.git
 
 Navigate to the Project Directory: cd Facial_Recognition_App
 
 Follow the Documentation: Check out the detailed docs to set up the app.
 
-# Contributing
+## Contributing
 We welcome contributions! If you have any suggestions or improvements, feel free to submit issues or pull requests.
