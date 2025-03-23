@@ -13,12 +13,14 @@ Admins register employees by submitting their name and image.
 The image is temporarily stored in Amazon S3, and AWS Rekognition checks if the face already exists.
 If the face is not found, the image is permanently stored in S3, indexed in Rekognition, and employee details (name, ID, image URL) are saved in DynamoDB.
 The system prevents duplicate registrations, even if an employee uploads a different image (e.g., different pose or angle).
+
 ✅ Employee Login:
 
 Employees authenticate by uploading their image, which is temporarily stored in S3.
 Rekognition searches for the face in the indexed collection.
 If a match is found, the employee is successfully authenticated, and their details are retrieved from DynamoDB and displayed.
 If no match is found, an error message is shown.
+
 ✅ Serverless Architecture:
 
 AWS Lambda: Handles backend logic, ensuring scalability and cost efficiency.
@@ -26,6 +28,7 @@ Amazon API Gateway: Exposes REST APIs for employee registration and authenticati
 Amazon DynamoDB: Stores employee data, ensuring quick lookups and high availability.
 Amazon S3: Used for secure image storage.
 AWS Rekognition: Powers AI-based facial recognition, enabling automated authentication.
+
 ✅ Static Website Hosting:
 
 The frontend is built with HTML, CSS, and JavaScript and hosted on Amazon S3.
