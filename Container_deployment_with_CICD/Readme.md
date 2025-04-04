@@ -71,6 +71,10 @@ Clone the Repository: git clone https://github.com/M-Yassir/AWS-Projects.git
 
 Navigate to the Project Directory: cd Container_deployment_with_CICD
 
+Open the weather-app application in your editor
+
+Make sure that you have the latest version of the AWS CLI and Docker installed.                                 
+
 Follow the Documentation: Check out the detailed docs to set up the app.
 
 ## Contributing
