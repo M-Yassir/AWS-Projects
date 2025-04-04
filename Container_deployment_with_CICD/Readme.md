@@ -61,7 +61,7 @@ Distributes traffic across containers with health checks
    - Logs stored for debugging
 
 ## Video Demonstration 📹
-
+https://github.com/user-attachments/assets/0812eb74-891e-4603-b963-9178df148bc7
 
 ## Important Note 🚨
 This project was developed as a learning exercise within AWS Free Tier limits. The live implementation has been terminated, but the code and documentation remain available for educational purposes.
