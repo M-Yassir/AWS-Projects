@@ -65,6 +65,8 @@ terraform-aws-3tier/
 
 ## Video Demonstration 📹
 
+https://github.com/user-attachments/assets/79798e57-889d-4e87-acbe-e96dcd427b97
+
 ## ⚙️ Configuration
 
 ### 1. Clone the Repository
