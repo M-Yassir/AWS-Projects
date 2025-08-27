@@ -63,6 +63,8 @@ terraform-aws-3tier/
     └── backend-userdata.sh   # Backend instance bootstrap script
 ```
 
+## Video Demonstration 📹
+
 ## ⚙️ Configuration
 
 ### 1. Clone the Repository
