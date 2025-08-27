@@ -1,3 +1,5 @@
+![Terraform Version](https://img.shields.io/badge/terraform-1.6+-623CE4?logo=terraform)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?logo=amazon-aws&logoColor=white)
 # 🚀 AWS 3-Tier Web Application Architecture
 
 A production-grade, highly available 3-tier web application infrastructure built on AWS and managed entirely with Terraform. This architecture demonstrates best practices for security, scalability, and reliability.
