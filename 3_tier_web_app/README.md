@@ -70,7 +70,7 @@ terraform-aws-3tier/
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/M-Yassir/AWS-Projects.git
-cd 3_tier_web_app
+cd AWS-Projects/3_tier_web_app/terraform_files
 ```
 
 ### 2. Review Core Configuration Files
