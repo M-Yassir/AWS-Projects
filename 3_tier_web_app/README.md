@@ -32,6 +32,7 @@ This project deploys a secure and scalable 3-tier architecture:
 
 Below is a visual overview of the deployed infrastructure:
 
+<img width="1138" height="765" alt="image" src="https://github.com/user-attachments/assets/33a35e9d-10a9-44de-952a-a27318eb4606" />
 
 
 **Flow Explanation:**
