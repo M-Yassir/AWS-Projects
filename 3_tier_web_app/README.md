@@ -1,4 +1,4 @@
-![Terraform Version](https://img.shields.io/badge/terraform-1.6+-623CE4?logo=terraform)
+![Terraform Version](https://img.shields.io/badge/terraform-1.0+-623CE4?logo=terraform)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?logo=amazon-aws&logoColor=white)
 # 🚀 AWS 3-Tier Web Application Architecture
 
